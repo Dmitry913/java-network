@@ -17,6 +17,7 @@ public class Lesson2 {
             return;
         }
         URLConnection urlConnection = new URL(httpAddress).openConnection();
+        // только теперь устанавливается соединение
         urlConnection.connect();
         System.out.println("\nResources type - " + urlConnection.getContentType());
         System.out.println("Resources size - " + urlConnection.getContentLength());

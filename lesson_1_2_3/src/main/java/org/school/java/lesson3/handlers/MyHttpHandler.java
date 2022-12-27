@@ -5,7 +5,6 @@ import com.sun.net.httpserver.HttpHandler;
 import org.school.java.lesson3.constants.HeaderName;
 import org.school.java.lesson3.exceptions.InvalidLogin;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
@@ -19,7 +18,7 @@ import static org.school.java.lesson3.constants.UrlParams.LOGIN;
 
 public class MyHttpHandler implements HttpHandler {
 
-    public static final String CORRECT_LOGIN = "java";
+    private static final String CORRECT_LOGIN = "java";
 
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {

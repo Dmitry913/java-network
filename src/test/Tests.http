@@ -1,0 +1,7 @@
+###
+GET http://localhost:8081/example
+###
+
+###
+POST http://localhost:8081/example
+###

@@ -24,16 +24,6 @@ public class Lesson3 {
     private static final Integer THREAD_COUNT = 2;
 
     public static void main(String[] args) {
-        new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(1000);
-                    System.out.println(LocalTime.now());
-                } catch (Exception e) {
-                    System.out.println("Can't sleep and time");
-                }
-            }
-        }).start();
         runServer();
         HttpClient httpClient = upClient();
         System.out.println("Input: ");

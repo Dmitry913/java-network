@@ -8,14 +8,11 @@ import java.util.Scanner;
 public class Lesson2 {
 
     public static void main(String[] args) throws IOException {
-        String httpAddress = null;
-        if (args.length > 0) {
-            httpAddress = args[0];
-        }
-        if (httpAddress == null) {
+        if (args.length == 0) {
             System.out.println("Not input http address");
             return;
         }
+        String httpAddress = args[0];
         URLConnection urlConnection = new URL(httpAddress).openConnection();
         // только теперь устанавливается соединение
         urlConnection.connect();
